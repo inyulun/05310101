@@ -1,0 +1,151 @@
+*{
+    /* border: solid 1px black; */
+}
+body{
+    padding: 50px; /*產生與body的內距為50px*/
+    display: flex;
+    justify-content: center; /*左右置中*/
+    background: #02005B;
+    color:rgba(255, 255, 255,0.95);
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    font-family: "微軟正黑體",sans-serif;
+    
+}
+.resume{
+    display: flex;
+    max-width: 950px;
+    /* height: 100%; */
+    border: solid 8px #fff;
+    height: fit-content;
+    padding: 50px;
+    position: relative; 
+}
+.left{
+    flex: 5;
+}
+.right{
+    flex: 7;
+}
+.left,.right{
+   padding: 15px; 
+}
+.left{
+    padding-right: 50px;
+    border-right: solid 1px #ff7168;
+}
+.right{
+    padding-left: 50px;
+    padding-top: 150px;
+    /* position: relative; */
+}
+ul{
+  list-style: none; 
+  padding: 0px; /*內距*/
+}
+h2{
+    margin: 0 ;/*外距*/
+    margin-bottom:25px ;
+    font-weight: 400;
+}
+h4{
+    margin: 0 ;/*外距*/
+    margin-top: 40px ;
+    opacity: 0.8;
+    font-weight: 400;  
+}
+h2::after{
+    content: "";
+    display: inline-block; 
+    width: 20px;
+    height: 8px;
+    background-color: #ff7168;
+    margin-left: 10px;
+
+}
+.decoration{
+    width: 300px;
+    height: 140px;
+    /* background: linear-gradient(to bottom left,#FF7168,#ffffae); */
+    background: linear-gradient(135deg,#ff7168,#ffffae);
+    border-radius: 70px 0 0 70px ;
+    /*設定一個div位置*/
+    position: absolute;
+    /* left: 0; */
+    right: 0;
+    top: 50px;
+}
+.listexperience li{
+    display: flex;
+}
+
+.listexperience li ul{
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: solid 4px #fff;
+
+}
+.listexperience>li:nth-child(1) ul{  /*代表第一個li下的ul*/
+    border-color: #FF7168;
+}
+.listexperience>li:nth-child(2) ul{  /*代表第一個li下的ul*/
+    border-color: #e98e75;
+}
+.listexperience>li:nth-child(3) ul{  /*代表第一個li下的ul*/
+    border-color: #ffb087;
+}
+.listexperience>li:nth-child(4) ul{  /*代表第一個li下的ul*/
+    border-color: #f3c9b3;
+}
+
+.circle{
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50% ;
+    position: relative;
+    overflow: hidden; /*超出的範圍做隱藏*/
+    background-color: rgba(255, 113, 140, 0.4);
+}
+.p90,.p180,.p270,.p360{
+    width: 50%;
+    height: 50%;
+    background-color: #FF7168;
+    position:absolute;
+    left: 50%;
+    /* right: 0; */
+    top: 0;
+}
+.p180{
+    top: 50%;
+}
+.p270{
+    left:0;
+    top: 50%;
+}
+.p360{
+    left:0;
+    top: 0;
+}
+.circle::after{
+    content:"";
+    background-color: #02005B;
+    width: calc(50px-25px);/*計算全圓(100%)剪掉左右各10px*/
+    height: calc(50px-25px);
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+
+.listskill{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.listskill li{
+    width: 25%;box-sizing: ;
+}
